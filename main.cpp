@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
 
 using namespace std;
 
@@ -18,8 +18,20 @@ int main() {
 		if (numb != 0) {
 			list0.push_back(numb);
 		}
-	}
 
+		else if (numb == 0) {
+			break;
+		}
+
+		else {
+			cout << "incorrect input";
+			break
+		}
+	}
+	
+	int max = *max_element(list0.begin, list0.end);
+
+	cout << "MAX element = " << max << endl;
 
 
 	return 0;
