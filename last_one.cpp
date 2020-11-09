@@ -4,33 +4,27 @@
 using namespace std;
 
 class Parent {
-private:
-	int *friends;
-
-protected:
-	int age;
-
 public:
 	
 	Parent() {
-		age = 40;
-		friends = new int[100];
+		cout << "Parent constructtor" << endl;
 	}
 
 	~Parent() {
-		delete[] friends;
+		cout << "Parent destructor" << endl;
 	}
 
-	int getAge() {
-		return age;
-	}
 };
 
 
 class Child : public Parent {
 public:
 	Child() {
-		age = 14;
+		cout << "Child constructtor" << endl;
+	}
+
+	~Child() {
+		cout << "Child constructtor" << endl;
 	}
 
 };
@@ -38,10 +32,8 @@ public:
 
 int main() {
 	
-	Parent first;
 	Child sec;
 
-
-
+	
 	return 0;
 }
