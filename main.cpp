@@ -25,11 +25,11 @@ int main() {
 
 		else {
 			cout << "incorrect input";
-			break
+			break;
 		}
 	}
 	
-	int max = *max_element(list0.begin, list0.end);
+	int max = *max_element(list0.begin(), list0.end());
 
 	cout << "MAX element = " << max << endl;
 
